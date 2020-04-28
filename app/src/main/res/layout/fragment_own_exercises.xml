@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".android.OwnExercisesFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:id="@+id/own_recycler_view"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/new_cardio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/own_recycler_view"
+        android:text="ADD NEW CARDIO"
+        android:background="@color/colorPrimary"
+        android:paddingHorizontal="4dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorLightText"/>
+
+    <Button
+        android:id="@+id/new_strength_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/own_recycler_view"
+        android:layout_toRightOf="@id/new_cardio_button"
+        android:text="ADD NEW STRENGTH"
+        android:background="@color/colorPrimary"
+        android:paddingHorizontal="4dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorLightText"/>
+
+</RelativeLayout>

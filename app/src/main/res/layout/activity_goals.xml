@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".android.GoalsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:id="@+id/toolbar_text"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingRight="24dp"
+            android:text="AlphaFit" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout_goals"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="start">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PADDING"
+                android:textSize="40dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/goals_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/space"/>
+
+            <TextView
+                android:id="@+id/goals_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add more goals to see them show up here"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/goals_recycler_view"/>
+
+            <Button
+                android:layout_margin="20dp"
+                android:id="@+id/new_goal_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD"
+                android:textColor="@color/colorPrimary"
+                android:background="@color/colorLightText"
+                android:layout_below="@id/goals_text"/>
+
+        </RelativeLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/drawer_menu">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="177dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/alphafitlogo" />
+            </RelativeLayout>
+
+        </com.google.android.material.navigation.NavigationView>
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".android.OwnIngredientsFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:id="@+id/own_recycler_view"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/new_ing_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/own_recycler_view"
+        android:text="ADD NEW INGREDIENT"
+        android:background="@color/colorPrimary"
+        android:paddingHorizontal="4dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorLightText"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".android.goalfragments.StreakGoalFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/goals_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set a goal to exercise everyday you specify."
+            android:layout_margin="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/check_boxes"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/goals_text">
+
+            <CheckBox
+                android:layout_margin="10dp"
+                android:id="@+id/check_mon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <CheckBox
+                android:layout_margin="10dp"
+                android:id="@+id/check_tue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <CheckBox
+                android:layout_margin="10dp"
+                android:id="@+id/check_wed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <CheckBox
+                android:layout_margin="10dp"
+                android:id="@+id/check_thu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <CheckBox
+                android:layout_margin="10dp"
+                android:id="@+id/check_fri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <CheckBox
+                android:layout_margin="10dp"
+                android:id="@+id/check_sat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <CheckBox
+                android:layout_margin="10dp"
+                android:id="@+id/check_sun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/name_section"
+            android:layout_below="@id/check_boxes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_marginHorizontal="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mon"/>
+
+            <TextView
+                android:layout_marginHorizontal="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tue"/>
+
+            <TextView
+                android:layout_marginHorizontal="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wed"/>
+
+            <TextView
+                android:layout_marginHorizontal="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thu"/>
+
+            <TextView
+                android:layout_marginHorizontal="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fri"/>
+
+            <TextView
+                android:layout_marginHorizontal="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sat"/>
+
+            <TextView
+                android:layout_marginHorizontal="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sun"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/name_section">
+            <TextView
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Date"/>
+
+            <DatePicker
+                android:id="@+id/picker_start"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"/>
+
+            <TextView
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End Date"/>
+
+            <DatePicker
+                android:id="@+id/picker_end"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"/>
+
+            <Button
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/save_goal_button"
+                android:text="SAVE"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorLightText"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

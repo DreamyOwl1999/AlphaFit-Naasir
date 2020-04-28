@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/goal_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Goal name goes here"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/goal_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/goal_name"
+            android:layout_marginVertical="5dp"
+            android:text="description goes here" />
+
+        <TextView
+            android:id="@+id/goal_achieved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ACHIEVED"
+            android:layout_alignParentRight="true"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date_show"
+            android:text="blah blah"
+            android:layout_below="@id/goal_description"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

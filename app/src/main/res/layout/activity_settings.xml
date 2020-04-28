@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".android.SettingsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:id="@+id/toolbar_text"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingRight="24dp"
+            android:text="Settings" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+
+        android:id="@+id/drawer_layout_settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PADDING"
+                android:textSize="40dp"
+                android:paddingBottom="12dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal Info"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
+                android:paddingLeft="8dp"
+                android:paddingBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Name"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editFirstName"
+                android:layout_marginHorizontal="20dp"/>
+
+            <EditText
+                android:id="@+id/editLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"/>
+
+            <Spinner
+                android:id="@+id/editSex"
+                android:layout_margin="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/gender_array"/>
+
+            <Spinner
+                android:id="@+id/editActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/activity_array"
+                android:layout_marginHorizontal="20dp"
+                android:paddingBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/editHeight"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nonEditWeight"
+                android:text="weight goes here"
+                android:layout_marginHorizontal="24dp"
+                android:paddingTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of Birth"
+                android:layout_marginHorizontal="40dp"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <DatePicker
+                android:id="@+id/editBirth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginVertical="10dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:paddingBottom="20dp">
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CANCEL"
+                android:layout_marginLeft="20dp"/>
+
+            <Button
+                android:id="@+id/goToGoalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EDIT MAIN GOAL"
+                android:paddingHorizontal="4dp"
+                android:layout_toRightOf="@id/cancelButton"
+                android:background="@color/colorAccent"
+                android:textColor="@color/colorLightText"
+                android:layout_marginHorizontal="30dp"/>
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SAVE"
+                android:textColor="@color/colorLightText"
+                android:background="@color/colorPrimary"
+                android:layout_toRightOf="@id/goToGoalButton"/>
+
+        </RelativeLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/drawer_menu">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+
+                <ImageView
+                    android:layout_width="149dp"
+                    android:layout_height="221dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/alphafitlogo" />
+            </RelativeLayout>
+
+        </com.google.android.material.navigation.NavigationView>
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>

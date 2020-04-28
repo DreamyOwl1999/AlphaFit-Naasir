@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".android.AddCardioActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:id="@+id/toolbar_text"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingRight="36dp"
+            android:text="Add Cardio Exercise" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/exercise_name"
+        android:hint="Exercise Name"
+        android:inputType="text"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="10dp" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/exercise_duration"
+        android:layout_below="@id/exercise_name"
+        android:layout_margin="10dp"
+        android:hint="Exercise Duration (minutes)"
+        android:inputType="number"/>
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/exercise_distance"
+        android:layout_below="@id/exercise_duration"
+        android:layout_margin="10dp"
+        android:hint="Exercise Distance (km)"
+        android:inputType="number"/>
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/exercise_calories"
+        android:layout_below="@id/exercise_distance"
+        android:layout_margin="10dp"
+        android:hint="Exercise Calories"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/exercise_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="CANCEL"
+        android:layout_below="@id/exercise_calories" />
+
+    <Button
+        android:id="@+id/exercise_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        android:textColor="@color/colorLightText"
+        android:background="@color/colorPrimary"
+        android:layout_below="@id/exercise_calories"
+        android:layout_toRightOf="@id/exercise_cancel"
+        android:layout_margin="10dp"/>
+
+</RelativeLayout>

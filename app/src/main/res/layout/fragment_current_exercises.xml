@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".android.CurrentExercisesFragment">
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CANCEL"
+        android:layout_margin="4dp"/>
+
+    <Button
+        android:id="@+id/save_workout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/colorLightText"
+        android:background="@color/colorPrimary"
+        android:layout_margin="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Calories Burned: "
+        android:id="@+id/workout_calories"
+        android:layout_below="@id/cancel_button"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Meal Calories: "
+        android:id="@+id/workout_duration"
+        android:layout_below="@id/workout_calories"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter the workout name here"
+        android:id="@+id/workout_name"
+        android:layout_below="@id/workout_duration"/>
+
+    <TimePicker
+        android:id="@+id/workout_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        android:layout_below="@id/workout_name"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="60dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/current_recycler_view"
+        android:layout_below="@id/workout_time"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/current_recycler_view"
+        android:text="Add more exercises using the search and own tabs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="6dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info"
+        android:layout_marginVertical="6dp"
+        android:layout_centerHorizontal="true"
+        android:text="Use the recommended tab to look at premade workouts"/>
+
+
+</RelativeLayout>

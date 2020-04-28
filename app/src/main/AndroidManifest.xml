@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.alphafit">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/alphafit_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/alphafit_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".android.goalfragments.NewGoalActivity"></activity>
+        <activity android:name=".android.AddStrengthActivity" />
+        <activity android:name=".android.AddCardioActivity" />
+        <activity android:name=".android.AddWorkoutActivity" />
+        <activity android:name=".android.AddIngredientActivity" />
+        <activity android:name=".android.AddMealActivity" />
+        <activity android:name=".android.EditMainGoalActivity" />
+        <activity android:name=".android.MainGoalActivity" />
+        <activity android:name=".Tetris_UI" />
+        <activity android:name=".android.MainActivity" />
+        <activity android:name=".android.AddWeightActivity" />
+        <activity android:name=".android.ViewAnalysisActivity" />
+        <activity android:name=".android.LoginActivity" />
+        <activity android:name=".android.GoalsActivity" />
+        <activity android:name=".android.SettingsActivity" />
+        <activity
+            android:name=".android.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".android.EnterInfoActivity" />
+        <activity android:name=".android.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

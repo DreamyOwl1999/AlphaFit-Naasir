@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1076070223567",
+    "firebase_url": "https://alphafit-c6cff.firebaseio.com",
+    "project_id": "alphafit-c6cff",
+    "storage_bucket": "alphafit-c6cff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076070223567:android:a99d99d5b6f8ef39d771ba",
+        "android_client_info": {
+          "package_name": "com.example.alphafit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1076070223567-ru2o20o28pfkas33ucklnuobbr7l4sgr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.alphafit",
+            "certificate_hash": "8a695e246e269ef5f1a227d420cd7254bdf42f48"
+          }
+        },
+        {
+          "client_id": "1076070223567-ckem4nerh8dpmupogl52ksfu56j9l6ds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBl-667Id5jwgCChw2-PpNfXxb-bvOduSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1076070223567-ckem4nerh8dpmupogl52ksfu56j9l6ds.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

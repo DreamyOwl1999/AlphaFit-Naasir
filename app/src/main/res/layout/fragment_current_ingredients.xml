@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/fragment_current_ingredients"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".android.CurrentIngredientsFragment">
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CANCEL"
+        android:layout_margin="4dp"/>
+
+    <Button
+        android:id="@+id/save_meal_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/colorLightText"
+        android:background="@color/colorPrimary"
+        android:layout_margin="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Meal Calories: "
+        android:id="@+id/meal_calories"
+        android:layout_below="@id/cancel_button"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Meal Weight: "
+        android:id="@+id/meal_weight"
+        android:layout_below="@id/meal_calories"/>
+
+    <TimePicker
+        android:id="@+id/meal_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        android:layout_below="@id/meal_weight"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="60dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/current_recycler_view"
+        android:layout_below="@id/meal_time"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/current_recycler_view"
+        android:text="Add more ingredients using the search and own tabs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="6dp"/>
+
+</RelativeLayout>

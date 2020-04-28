@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/homepage_name"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:text="Breakfast"
+            android:textSize="28dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"/>
+
+        <TextView
+            android:id="@+id/homepage_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/homepage_calories"
+            android:text="time"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/homepage_calories"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="200 cal"
+            android:textSize="28dp"
+            android:layout_toRightOf="@id/homepage_name"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"/>
+
+
+        <TextView
+            android:id="@+id/homepage_description"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="details go here"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_below="@id/homepage_name"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
